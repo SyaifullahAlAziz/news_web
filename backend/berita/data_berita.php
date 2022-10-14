@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
 $no = 0;
-$query = mysqli_query($koneksi, "SELECT * FROM tb_berita a LEFT JOIN tb_kategori b
+$query = mysqli_query($koneksi, "SELECT * FROM tb_berita a JOIN tb_kategori b
 ON a.id_kategori=b.id_kategori ORDER BY id_berita DESC");
 ?>
 

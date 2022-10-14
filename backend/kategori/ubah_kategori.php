@@ -19,10 +19,10 @@ $row = mysqli_fetch_array($query);
                 <!-- form start -->
                 <form role="form" method="post" action="kategori/ubah_kategori_proses.php" enctype="multipart/form-data">
                     <div class="box-body">
-                        <input type="hidden" name="id_kategori" value="<?php echo $row['id_kategori']; ?>">
+                        <input type="hidden" name="id_kategori" value="<?= $row['id_kategori']; ?>">
                         <div class="form-group">
                             <label>Judul Kategori</label>
-                            <input type="text" name="judul_kategori" class="form-control" placeholder="Judul Kategori" value="<?php echo $row['judul_kategori']; ?>" required>
+                            <input type="text" name="judul_kategori" class="form-control" placeholder="Judul Kategori" value="<?= $row['judul_kategori']; ?>" required>
                         </div>
 
                         <div class="box-footer">

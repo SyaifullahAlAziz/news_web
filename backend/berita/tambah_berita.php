@@ -18,11 +18,11 @@
                                 <select name="id_kategori" id="id_kategori" class="form-control" required>
                                     <option value="">Silahkan Dipilih</option>
                                     <?php
-                                    $data = $koneksi->query("SELECT * FROM tb_kategori");
-                                    while ($ekstrak = $data->fetch_assoc()) {
+                                    $query = mysqli_query($koneksi, "SELECT * FROM tb_kategori");
+                                    while ($data = mysqli_fetch_array($query)) {
                                     ?>
-                                        <option value="<?= $ekstrak['id_kategori'] ?>">
-                                            <?= $ekstrak['judul_kategori'] ?>
+                                        <option value="<?= $data['id_kategori'] ?>">
+                                            <?= $data['judul_kategori'] ?>
                                         </option>
 
                                     <?php } ?>
